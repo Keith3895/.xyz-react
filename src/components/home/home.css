@@ -1,0 +1,117 @@
+#myCanvasContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    height: auto;
+    width: 15%;
+    border-radius: 100%;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContainer {
+    display: flex;
+    flex: 1 1 100%;
+    max-width: 20%;
+    margin: 35px;
+}
+
+.flexCenter .cardContainer:nth-child(1) .card {
+    animation-duration: 1s
+}
+
+.flexCenter .cardContainer:nth-child(2) .card {
+    animation-duration: 1.25s
+}
+
+.flexCenter .cardContainer:nth-child(3) .card {
+    animation-duration: 1.5s
+}
+
+.flexCenter .cardContainer:nth-child(4) .card {
+    animation-duration: 1.75s
+}
+
+.flexCenter .cardContainer:nth-child(5) .card {
+    animation-duration: 2s
+}
+
+.flexCenter .cardContainer:nth-child(6) .card {
+    animation-duration: 2.25s
+}
+
+.flexCenter .cardContainer:nth-child(7) .card {
+    animation-duration: 2.5s
+}
+
+.flexCenter .cardContainer:nth-child(8) .card {
+    animation-duration: 2.75s
+}
+
+.circle-button-lists {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+    max-width: 15%;
+    display: flex;
+}
+
+.circle-button-lists div {
+    float: left;
+    margin: 10px;
+}
+
+.circle-button-lists a:link,
+.circle-button-lists a:visited {
+    color: white;
+}
+
+.btn-cir {
+    width: 10%;
+}
+
+.Reach {
+    width: 50%;
+    float: left;
+    font-size: 1.5em;
+    font-weight: 100;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    max-width: 14%;
+    display: flex;
+}
+
+.Reach span {
+    font-size: .5em;
+    margin-left: 10px;
+}
+
+.footer {
+    background: black;
+    color: white;
+    padding: 2em;
+    margin-top: 6em
+}
+
+.circle-button{
+    border-radius: 100%;
+    height: auto;
+    width: 3.5em;
+    border: 3px solid white;
+}
+.circle-button i{
+    font-size: 2em;
+    padding: 10px;
+}
+@media only screen and (max-width:360px) {
+    #myCanvas {
+        width: 350px;
+        height: 250px;
+    }
+}

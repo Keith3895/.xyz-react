@@ -86,23 +86,6 @@ class Navbar extends Component {
                 <nav className={"cd-3d-nav-container " + this.state.navClass}>
                     <ul className="cd-3d-nav">
                         {this.createLinks()}
-                        {/* <CustomLink to={'/'} click={this.linkClick}  >
-                            Home
-                        </CustomLink>
-                        <CustomLink to={'/project'} click={this.linkClick}>
-                            Projects
-                        </CustomLink>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Contact</a>
-                        </li> */}
                     </ul>
                     <span className="cd-marker color-1" style={this.state.position}></span>
                 </nav>
