@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/navbar/navbar';
 import Main from './components/Main';
+import { BrowserRouter } from 'react-router-dom';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -33,12 +34,14 @@ class App extends Component {
   }
   render() {
     return (
+      <BrowserRouter>
       <div>
         <NavBar active={this.navActive} />
         <div style={this.state.margin}>
           <Main />
         </div>
       </div>
+      </BrowserRouter>
     );
   }
 }
