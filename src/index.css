@@ -4,3 +4,24 @@ body {
   font-family: sans-serif;
   transition: 0.5s ease;
 }
+.flexCenter{
+  place-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.flexColumn{
+  display: flex;
+  flex-direction: column;
+}
+.flexRow{
+  display: flex;
+  flex-direction: row;
+}
+.filler{
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  max-width: 100%;
+  display: flex;
+}
