@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500&display=swap');
+
+h1{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    color: #c3ff50;
+    font-size: 3em;
+    border-bottom:1px dashed #b5e853;
+    padding-bottom: 1em;
+    margin: 0px;
+}
+
+.blogRoot{
+    color: white;
+}

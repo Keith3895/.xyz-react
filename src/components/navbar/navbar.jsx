@@ -4,8 +4,8 @@ import { NavLink as Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 const CustomLink = ({ children, to, exact, click }) => (
-    <Route path={to} exact={exact} children={({ match }) => (
-        <li onClick={click} className={match ? 'cd-selected' : ''} ref={to}>
+    <Route path={to} children={({ match }) => (
+        <li onClick={click} className={match ? 'cd-selected' : ''} key={to}>
             <Link to={to}>
                 {children}
             </Link>
@@ -46,7 +46,7 @@ class Navbar extends Component {
     }
     createLinks(){
         let routes=[{
-            path:"/",
+            path:"/home",
             Title:"Home"
         },{
             path:"/project",

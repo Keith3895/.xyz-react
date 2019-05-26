@@ -47,7 +47,6 @@ class Home extends React.Component {
             "R",
             "ChartJS",
             "WordPress",
-            "Node",
             "Bootstrap",
             "Ionic",
             "Java",
@@ -57,7 +56,12 @@ class Home extends React.Component {
             "React",
             "Python",
             "opencv",
-            "Flask"];
+            "Flask",
+            "pytest",
+            "React",
+            "Kofax",
+            "Oracle DB",
+            "Mongo DB"];
         return list.map((el, i) => {
             return (<li key={i}><a>{el}</a></li>);
         });

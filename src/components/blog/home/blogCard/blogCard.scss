@@ -1,0 +1,23 @@
+.blogCard{
+    border:1px dashed #b5e853;
+    padding: 10px;
+    margin-bottom:10px; 
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.indent{
+    text-indent: 5%;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: .9em;
+    line-height: 1.3;
+}
+
+a{
+    color: #63c0f5;
+    text-shadow: 0 0 5px rgba(104,182,255,0.5);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: .9em;
+    line-height: 1.3;
+}

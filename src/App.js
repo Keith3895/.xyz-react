@@ -34,14 +34,12 @@ class App extends Component {
   }
   render() {
     return (
-      <BrowserRouter>
       <div>
         <NavBar active={this.navActive} />
         <div style={this.state.margin}>
           <Main />
         </div>
       </div>
-      </BrowserRouter>
     );
   }
 }
