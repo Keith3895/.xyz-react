@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './navbar.css';
-import { Link, NavLink } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 const CustomLink = ({ children, to, exact, click }) => (
-    // <li >
-        <NavLink to={to} exact={exact} className='el' activeClassName="cd-selected" >
+    <li >
+        <NavLink to={to} exact={exact} className='el' activeClassName="cd-selected" onClick={click} >
             {children}
         </NavLink>
-    // </li>
+    </li>
 );
 class Navbar extends Component {
 
@@ -33,13 +32,14 @@ class Navbar extends Component {
         this.setState({
             position: { left: event.target.offsetLeft }
         });
+        this.NavControl(event);
     }
     componentDidMount() {
         let rect = ReactDOM.findDOMNode(this)
             .getElementsByClassName('cd-selected');
-        // this.setState({
-        //     position: { left: rect[0].offsetLeft }
-        // });
+        this.setState({
+            position: { left: rect[0].offsetLeft }
+        });
 
     }
     createLinks() {
@@ -55,9 +55,6 @@ class Navbar extends Component {
         }, {
             path: "/about",
             Title: "About"
-        }, {
-            path: "/contact",
-            Title: "Contact"
         }];
         return routes.map((el, i) => {
             return (
@@ -71,11 +68,7 @@ class Navbar extends Component {
         return (
             <div>
                 <header className={"cd-header " + this.state.navClass}>
-                    {/* <Link to={} className="cd-logo">
-                        <blockquote id="page_id">
-                            Home.
-                        </blockquote>
-                    </Link> */}
+                 {/* eslint-disable-next-line */}
                     <a className="cd-3d-nav-trigger" onClick={this.NavControl}>
                         Menu
                     <span></span>
