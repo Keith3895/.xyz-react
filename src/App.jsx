@@ -15,8 +15,8 @@ class App extends Component {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
   }
-  componentWillUnmount(){
-    window.removeEventListener('resize',this.updateWindowDimensions);
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
   }
   updateWindowDimensions() {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
@@ -24,9 +24,9 @@ class App extends Component {
   navActive(active) {
     console.log(active);
     let value;
-    if( this.state.width>360 && this.state.height>640){
+    if (this.state.width > 360 && this.state.height > 640) {
       value = '10em';
-    }else{
+    } else {
       value = 0;
     }
     this.setState({
