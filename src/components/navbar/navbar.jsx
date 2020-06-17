@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import './navbar.css';
-import { NavLink as Link } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 const CustomLink = ({ children, to, exact, click }) => (
-    <Route path={to} exact={exact} children={({ match }) => (
-        <li onClick={click} className={match ? 'cd-selected' : ''} ref={to}>
-            <Link to={to}>
-                {children}
-            </Link>
-        </li>
-    )} />
+    <li >
+        <NavLink to={to} exact={exact} className='el' activeClassName="cd-selected" onClick={click} >
+            {children}
+        </NavLink>
+    </li>
 );
 class Navbar extends Component {
 
@@ -35,6 +32,7 @@ class Navbar extends Component {
         this.setState({
             position: { left: event.target.offsetLeft }
         });
+        this.NavControl(event);
     }
     componentDidMount() {
         let rect = ReactDOM.findDOMNode(this)
@@ -44,26 +42,23 @@ class Navbar extends Component {
         });
 
     }
-    createLinks(){
-        let routes=[{
-            path:"/",
-            Title:"Home"
-        },{
-            path:"/project",
-            Title:"Project"
-        },{
-            path:"/blog",
-            Title:"Blogs"
-        },{
-            path:"/about",
-            Title:"About"
-        },{
-            path:"/contact",
-            Title:"Contact"
+    createLinks() {
+        let routes = [{
+            path: "/",
+            Title: "Home"
+        }, {
+            path: "/project",
+            Title: "Project"
+        }, {
+            path: "/blog",
+            Title: "Blogs"
+        }, {
+            path: "/about",
+            Title: "About"
         }];
-        return routes.map((el,i)=>{
+        return routes.map((el, i) => {
             return (
-                <CustomLink exact to={el.path} click={this.linkClick}  key={i}>
+                <CustomLink exact to={el.path} click={this.linkClick} key={i}>
                     {el.Title}
                 </CustomLink>
             );
@@ -73,11 +68,7 @@ class Navbar extends Component {
         return (
             <div>
                 <header className={"cd-header " + this.state.navClass}>
-                    {/* <Link to={} className="cd-logo">
-                        <blockquote id="page_id">
-                            Home.
-                        </blockquote>
-                    </Link> */}
+                 {/* eslint-disable-next-line */}
                     <a className="cd-3d-nav-trigger" onClick={this.NavControl}>
                         Menu
                     <span></span>
