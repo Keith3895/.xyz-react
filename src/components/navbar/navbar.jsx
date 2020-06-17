@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import './navbar.css';
-import { NavLink as Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 const CustomLink = ({ children, to, exact, click }) => (
-    <Route path={to} exact={exact} children={({ match }) => (
-        <li onClick={click} className={match ? 'cd-selected' : ''} ref={to}>
-            <Link to={to}>
-                {children}
-            </Link>
-        </li>
-    )} />
+    // <li >
+        <NavLink to={to} exact={exact} className='el' activeClassName="cd-selected" >
+            {children}
+        </NavLink>
+    // </li>
 );
 class Navbar extends Component {
 
@@ -39,31 +37,31 @@ class Navbar extends Component {
     componentDidMount() {
         let rect = ReactDOM.findDOMNode(this)
             .getElementsByClassName('cd-selected');
-        this.setState({
-            position: { left: rect[0].offsetLeft }
-        });
+        // this.setState({
+        //     position: { left: rect[0].offsetLeft }
+        // });
 
     }
-    createLinks(){
-        let routes=[{
-            path:"/",
-            Title:"Home"
-        },{
-            path:"/project",
-            Title:"Project"
-        },{
-            path:"/blog",
-            Title:"Blogs"
-        },{
-            path:"/about",
-            Title:"About"
-        },{
-            path:"/contact",
-            Title:"Contact"
+    createLinks() {
+        let routes = [{
+            path: "/",
+            Title: "Home"
+        }, {
+            path: "/project",
+            Title: "Project"
+        }, {
+            path: "/blog",
+            Title: "Blogs"
+        }, {
+            path: "/about",
+            Title: "About"
+        }, {
+            path: "/contact",
+            Title: "Contact"
         }];
-        return routes.map((el,i)=>{
+        return routes.map((el, i) => {
             return (
-                <CustomLink exact to={el.path} click={this.linkClick}  key={i}>
+                <CustomLink exact to={el.path} click={this.linkClick} key={i}>
                     {el.Title}
                 </CustomLink>
             );

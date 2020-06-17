@@ -4,18 +4,16 @@ import { Switch, Route, Router } from 'react-router-dom';
 class Main extends Component {
     render() {
         return (
-            <Router>
-                <Switch>
-                    <div>
-                        <Route exact path='/' render={(props) => {
-                            return (<h1>Home</h1>);
-                        }} />
-                        <Route path='/project' render={(props) => {
-                            return (<h1>Project</h1>);
-                        }} />
-                    </div>
-                </Switch>
-            </Router>
+            // <Router>
+            <Switch>
+                <Route exact path='/' render={(props) => {
+                    return (<h1>Home</h1>);
+                }} />
+                <Route path='/project' render={(props) => {
+                    return (<h1>Project</h1>);
+                }} />
+            </Switch>
+            // </Router>
         );
     }
 }
