@@ -3,15 +3,15 @@
     justify-content: center;
 }
 
+.parent {
+    display: flex;
+    flex-direction: column;
+}
+
 .image {
     height: auto;
     width: 15%;
     border-radius: 100%;
-}
-
-.parent {
-    display: flex;
-    flex-direction: column;
 }
 
 .cardContainer {
@@ -53,62 +53,6 @@
     animation-duration: 2.75s
 }
 
-.circle-button-lists {
-    flex: 1 1 100%;
-    box-sizing: border-box;
-    flex-direction: row;
-    max-width: 15%;
-    display: flex;
-}
-
-.circle-button-lists div {
-    float: left;
-    margin: 10px;
-}
-
-.circle-button-lists a:link,
-.circle-button-lists a:visited {
-    color: white;
-}
-
-.btn-cir {
-    width: 10%;
-}
-
-.Reach {
-    width: 50%;
-    float: left;
-    font-size: 1.5em;
-    font-weight: 100;
-    flex: 1 1 100%;
-    box-sizing: border-box;
-    flex-direction: column;
-    max-width: 14%;
-    display: flex;
-}
-
-.Reach span {
-    font-size: .5em;
-    margin-left: 10px;
-}
-
-.footer {
-    background: black;
-    color: white;
-    padding: 2em;
-    margin-top: 6em
-}
-
-.circle-button{
-    border-radius: 100%;
-    height: auto;
-    width: 3.5em;
-    border: 3px solid white;
-}
-.circle-button i{
-    font-size: 2em;
-    padding: 10px;
-}
 @media only screen and (max-width:360px) {
     #myCanvas {
         width: 350px;

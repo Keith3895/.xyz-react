@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snap shot test 1`] = `
+"<div class=\\"flexColumn\\">
+  <div class=\\"flexCenter\\"><img src=\\"assets/main.jpg\\" alt=\\"titleImage\\" class=\\"image\\"></div>
+  <h1>Keith Franklin Jathanna</h1>
+  <h2>I am a javascript developer constantly looking for ways to make websites look seemless and visually apealing and doing so in the quickest and simplest way.</h2>
+</div>"
+`;

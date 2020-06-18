@@ -97,8 +97,6 @@ describe('Hamburger icon', () => {
         a.click();
         let span = container.querySelector('.nav-is-visible .cd-3d-nav-trigger span');
         expect(span).toBeTruthy();
-        let marker = container.querySelector('.cd-marker.color-1');
-        let active = container.querySelector('.el.cd-selected');
         let list =  container.querySelectorAll('li');
         list[1].firstElementChild.click();
         expect(list[1].firstElementChild.className).toBe('el cd-selected');

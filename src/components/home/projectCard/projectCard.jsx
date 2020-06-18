@@ -24,3 +24,28 @@ class Project extends React.Component {
 }
 
 export default Project;
+
+
+
+
+// <h1>Projects I've worked on.</h1>
+// <div className="flexCenter">
+//     <div className='cardContainer'>
+//         < Project />
+//     </div>
+//     <div className='cardContainer'>
+//         < Project />
+//     </div>
+//     <div className='cardContainer'>
+//         < Project />
+//     </div>
+//     <div className='cardContainer'>
+//         < Project />
+//     </div>
+//     <div className='cardContainer'>
+//         < Project />
+//     </div>
+//     <div className='cardContainer'>
+//         < Project />
+//     </div>
+// </div>
