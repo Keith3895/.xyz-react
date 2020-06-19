@@ -28,7 +28,6 @@ class Navbar extends Component {
         this.props.active(this.state.navOpen);
     }
     linkClick(event) {
-        console.log(event.target.offsetLeft);
         this.setState({
             position: { left: event.target.offsetLeft }
         });
