@@ -1,7 +1,3 @@
-#myCanvasContainer {
-    display: flex;
-    justify-content: center;
-}
 
 .parent {
     display: flex;
@@ -12,50 +8,4 @@
     height: auto;
     width: 15%;
     border-radius: 100%;
-}
-
-.cardContainer {
-    display: flex;
-    flex: 1 1 100%;
-    max-width: 20%;
-    margin: 35px;
-}
-
-.flexCenter .cardContainer:nth-child(1) .card {
-    animation-duration: 1s
-}
-
-.flexCenter .cardContainer:nth-child(2) .card {
-    animation-duration: 1.25s
-}
-
-.flexCenter .cardContainer:nth-child(3) .card {
-    animation-duration: 1.5s
-}
-
-.flexCenter .cardContainer:nth-child(4) .card {
-    animation-duration: 1.75s
-}
-
-.flexCenter .cardContainer:nth-child(5) .card {
-    animation-duration: 2s
-}
-
-.flexCenter .cardContainer:nth-child(6) .card {
-    animation-duration: 2.25s
-}
-
-.flexCenter .cardContainer:nth-child(7) .card {
-    animation-duration: 2.5s
-}
-
-.flexCenter .cardContainer:nth-child(8) .card {
-    animation-duration: 2.75s
-}
-
-@media only screen and (max-width:360px) {
-    #myCanvas {
-        width: 350px;
-        height: 250px;
-    }
 }
