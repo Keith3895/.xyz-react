@@ -56,7 +56,7 @@ class Project extends React.Component {
                     </p>
                     <div style={{ color: "#586069" }} className='flexColumn'>
                         <div>
-                            Last Update on {new Date(projectObject.updated_at).toLocaleString()}
+                            Last Update on {new Date(projectObject.updated_at).toUTCString()}
                         </div>
                         {this.license(projectObject.license)}
                         <div className='flexRow' style={
