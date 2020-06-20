@@ -8,7 +8,7 @@ exports[`Hamburger icon snap shot test 1`] = `
       <li><a class=\\"el\\" href=\\"/\\">Home</a></li>
       <li><a aria-current=\\"page\\" class=\\"el cd-selected\\" href=\\"/project\\">Project</a></li>
       <li><a class=\\"el\\" href=\\"/blog\\">Blogs</a></li>
-      <li><a class=\\"el\\" href=\\"/about\\">About</a></li>
+      <li><a class=\\"el\\" href=\\"/contact\\">Contact</a></li>
     </ul><span class=\\"cd-marker color-1\\" style=\\"left: 0px;\\"></span>
   </nav>
 </div>"
