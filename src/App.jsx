@@ -4,6 +4,8 @@ import NavBar from './components/navbar/navbar';
 import Main from './components/Main';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from './components/footer/footer';
+import ReactGA from 'react-ga';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -11,8 +13,8 @@ class App extends Component {
     this.state = { margin: { "marginTop": 0 }, width: 0, height: 0 };
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    ReactGA.initialize('UA-88824970-1');
   }
-
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
