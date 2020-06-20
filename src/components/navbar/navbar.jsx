@@ -36,9 +36,11 @@ class Navbar extends Component {
     componentDidMount() {
         let rect = ReactDOM.findDOMNode(this)
             .getElementsByClassName('cd-selected');
-        this.setState({
-            position: { left: rect[0].offsetLeft }
-        });
+        if(rect[0]){
+            this.setState({
+                position: { left: rect[0].offsetLeft }
+            });
+        }
 
     }
     createLinks() {
@@ -52,8 +54,8 @@ class Navbar extends Component {
             path: "/blog",
             Title: "Blogs"
         }, {
-            path: "/about",
-            Title: "About"
+            path: "/contact",
+            Title: "Contact"
         }];
         return routes.map((el, i) => {
             return (
