@@ -76,8 +76,8 @@ export default class ProjectElement extends React.Component {
                             {this.props.project.name}
                         </h2>
                         <div className='flexRow projectDateContainer'>
-                            <span><strong>Creted at:</strong> {new Date(this.props.project.created_at).toLocaleString()}</span>
-                            <span><strong>Updated at:</strong> {new Date(this.props.project.updated_at).toLocaleString()}</span>
+                            <span><strong>Creted at:</strong> {new Date(this.props.project.created_at).toUTCString()}</span>
+                            <span><strong>Updated at:</strong> {new Date(this.props.project.updated_at).toUTCString()}</span>
                         </div>
                         <hr></hr>
                         <div className="description">

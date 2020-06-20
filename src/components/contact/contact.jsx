@@ -1,8 +1,8 @@
 import React from 'react';
 import './contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faInstagram, faLinkedin, faAngellist } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faLinkedin, faAngellist } from '@fortawesome/free-brands-svg-icons';
 export default class Contact extends React.Component {
     render() {
         return (
