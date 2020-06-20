@@ -307,6 +307,7 @@ Array [
                   "alignSelf": "center",
                   "display": "flex",
                   "flexWrap": "wrap",
+                  "justifyContent": "center",
                   "padding": "1em",
                 }
               }
@@ -321,7 +322,7 @@ Array [
                 style={
                   Object {
                     "color": "#586069",
-                    "width": "20%",
+                    "width": "10%",
                   }
                 }
                 viewBox="0 0 640 512"
@@ -513,6 +514,7 @@ Array [
                   "alignSelf": "center",
                   "display": "flex",
                   "flexWrap": "wrap",
+                  "justifyContent": "center",
                   "padding": "1em",
                 }
               }
@@ -527,7 +529,7 @@ Array [
                 style={
                   Object {
                     "color": "#586069",
-                    "width": "20%",
+                    "width": "10%",
                   }
                 }
                 viewBox="0 0 640 512"
