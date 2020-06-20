@@ -56,7 +56,7 @@ export default class WordCloud extends React.Component {
             "TypeScript",
             "React",
             "Python",
-            "opencv",
+            "OpenCV",
             "Flask",
             "Azure",
             "AWS",

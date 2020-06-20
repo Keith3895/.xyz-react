@@ -96,10 +96,11 @@ class Project extends React.Component {
                     'alignItems': 'center',
                     'flexWrap': 'wrap',
                     'alignContent': 'space-around',
-                    'alignSelf': 'center'
+                    'alignSelf': 'center',
+                    "justifyContent": 'center'
                 }
             }>
-                <FontAwesomeIcon icon={faBalanceScale} style={{ color: "#586069", width: '20%' }} />
+                <FontAwesomeIcon icon={faBalanceScale} style={{ color: "#586069", width: '10%' }} />
                 {licenseObj.name}
             </div>
         );

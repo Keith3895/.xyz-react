@@ -49,7 +49,6 @@ export default class ProjectsScroll extends React.Component {
 
     handleObserver(entities, observer) {
         const y = entities[0].boundingClientRect.y;
-        console.log(y);
         if (this.state.prevY > y) {
             const curPage = this.state.page + 1;
             this.getProjects(curPage);
