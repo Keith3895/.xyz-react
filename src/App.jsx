@@ -13,7 +13,7 @@ class App extends Component {
     this.state = { margin: { "marginTop": 0 }, width: 0, height: 0 };
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    ReactGA.initialize('UA-88824970-1');
+    ReactGA.initialize('UA-88824970-1',{ testMode: process.env.NODE_ENV === 'test' });
   }
   componentDidMount() {
     this.updateWindowDimensions();
