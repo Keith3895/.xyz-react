@@ -7,8 +7,8 @@ import Footer from "./components/footer";
 
 export default class Main extends Component {
     navigation = [
-        { name: 'About me', href: '#' },
-        { name: 'Blogs', href: '#' },
+        { name: 'About me', href: '/' },
+        { name: 'Blogs', href: '/blogs' },
         { name: 'Projects', href: '#' },
     ];
 
@@ -49,7 +49,7 @@ export default class Main extends Component {
                         </div>
                     </nav>
                 </header>
-                <div className="mt-24 md:mt-16">
+                <div className="mt-24 md:mt-16 pt-2">
                     <RouterProvider router={this.router} />
                 </div>
                 <Footer />
