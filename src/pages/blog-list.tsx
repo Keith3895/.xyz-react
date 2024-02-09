@@ -63,13 +63,6 @@ export default class BlogList extends Component {
 
                 <div className="flex flex-row gap-12 flex-wrap justify-center">
                     {this.showBlogs(this.state.blogs)}
-                    {/* <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard /> */}
                 </div>
 
             </div>
