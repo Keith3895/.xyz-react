@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 
 import Home from "./pages/home";
 import BlogList from "./pages/blog-list";
@@ -8,11 +8,11 @@ import Blog, { loader as BlogLoader } from "./pages/blog";
 export default class Main extends Component {
     navigation = [
         { name: 'About me', href: '/' },
-        { name: 'Blogs', href: '/blogs' },
+        { name: 'Blogs', href: '#/blogs' },
         { name: 'Projects', href: '#' },
     ];
 
-    router = createBrowserRouter([
+    router = createHashRouter([
         {
             path: "/",
             Component: Home
