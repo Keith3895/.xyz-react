@@ -32,7 +32,7 @@ export default class BlogCard extends Component<Blog> {
                     <p className="mb-3 font-normal text-gray-700 line-clamp-3">
                         {this.props.description}
                     </p>
-                    <a href={`#${this.props.slug}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center 
+                    <a href={`/blog/${this.props.slug}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center 
                     text-black bg-custom-orange-700 rounded-lg hover:bg-custom-orange-800 focus:ring-4 
                     focus:outline-none focus:ring-custom-orange-300">
                         Read more

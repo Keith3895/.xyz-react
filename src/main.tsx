@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
 import BlogList from "./pages/blog-list";
 import Footer from "./components/footer";
-
+import Blog, { loader as BlogLoader } from "./pages/blog";
 export default class Main extends Component {
     navigation = [
         { name: 'About me', href: '/' },
@@ -20,6 +20,11 @@ export default class Main extends Component {
         {
             path: "/blogs",
             Component: BlogList
+        },
+        {
+            path: "/blog/:slug",
+            Component: Blog,
+            loader: BlogLoader
         }
         // TODO: Add more routes here
     ]);
@@ -43,9 +48,9 @@ export default class Main extends Component {
                                     {item.name}
                                 </a>
                             ))}
-                            <button className="w-36 h-10 bg-custom-orange-600 rounded-3xl justify-center items-center gap-2.5 inline-flex ">
+                            <a href="mailto:keith30895@gmail.com" className="w-36 h-10 bg-custom-orange-600 rounded-3xl justify-center items-center gap-2.5 inline-flex ">
                                 <div className="text-center text-black text-base font-bold font-['Raleway']">CONTACT ME</div>
-                            </button>
+                            </a>
                         </div>
                     </nav>
                 </header>

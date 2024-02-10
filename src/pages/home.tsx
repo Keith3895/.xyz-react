@@ -3,6 +3,7 @@ import FlatButton from "../components/buttons/flatButton";
 import RaisedButton from "../components/buttons/raisedButton";
 import TickerTape from "../components/tickerTape";
 import TimeLine from "../components/timeline";
+import ReactGA from "react-ga4";
 
 export default class Home extends Component {
     yearCalc() {
@@ -20,6 +21,7 @@ export default class Home extends Component {
         return years;
     }
     render() {
+        ReactGA.send({ hitType: "pageview", page: "/", title: "About me" });
         return (
             <div>
                 <div className="flex w-full bgframe justify-center items-center">
@@ -35,8 +37,8 @@ export default class Home extends Component {
                                 Tech Enthusiast<span className="text-custom-orange-600 text-4xl font-bold">.</span>
                             </h1>
                             <div className="flex flex-row  ml-16 mt-14">
-                                <RaisedButton buttonName="Contact me" />
-                                <FlatButton btClass="ml-4" buttonName="My Résumé" />
+                                <RaisedButton buttonName="Contact me" onClick={() => { window.location.href = "mailto:keith30895@gmail.com" }} />
+                                <FlatButton btClass="ml-4" buttonName="My Résumé" href="./Resume.pdf" download="Resume"/>
                             </div>
                         </div>
 
