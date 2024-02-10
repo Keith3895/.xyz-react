@@ -67,7 +67,7 @@ export default class Home extends Component {
                             description: `A car wash service aggregator app.`,
                         },
                         {
-                            date: "2024-02-15",
+                            date: "Released on 2024-02-15",
                             title: "Rewamp of my portfolio",
                             description: `updated my portfolio with new projects and technologies. And a complete 
                             design overhaul.`,
