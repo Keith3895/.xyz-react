@@ -55,25 +55,20 @@ export default class Home extends Component {
 
                     <TimeLine timeline={[
                         {
-                            date: "2021",
-                            title: "Started working at",
-                            description: "I started" +
-                                " working at a company called " +
-                                "Cognizant as a Software Engineer",
+                            date: "Upcoming",
+                            title: "What is web 3.0?",
+                            description: `Navigationg the jargon and trying to unpack what is web3.`,
                         },
                         {
-                            date: "2020",
-                            title: "Graduated from",
-                            description: "I graduated from " +
-                                "the University of the West Indies " +
-                                "with a BSc in Computer Science",
+                            date: "In Progress",
+                            title: "Car wash app",
+                            description: `A car wash service aggregator app.`,
                         },
                         {
-                            date: "2019",
-                            title: "Started learning",
-                            description: "I started learning " +
-                                "about web development and " +
-                                "software engineering",
+                            date: "2024-02-15",
+                            title: "Rewamp of my portfolio",
+                            description: `updated my portfolio with new projects and technologies. And a complete 
+                            design overhaul.`,
                         }]} />
 
 
