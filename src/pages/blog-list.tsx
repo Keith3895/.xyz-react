@@ -36,12 +36,13 @@ export default class BlogList extends Component {
         return (
             <div className="flex flex-col space-y-4 my-10">
                 <div className="flex flex-row justify-center mt-10 mb-10">
-                    <div className="w-1/2 h-20 bg-white border-8 border-orange-400 justify-center items-center inline-flex">
-                        <div className="text-center text-black text-3xl font-bold font-['Raleway'] leading-10 tracking-widest">Beyond bits and chissels</div>
+                    <div className="w-11/12 md:w-1/2 h-20 bg-white border-8 border-orange-400 justify-center items-center inline-flex">
+                        <div className="text-center text-black text-xl md:text-3xl font-bold font-['Raleway'] leading-10 tracking-widest">Beyond bits and chissels</div>
                     </div>
                 </div>
+                {/* search bar */}
                 <div className="flex justify-center">
-                    <div className="w-1/2">
+                    <div className="w-11/12 md:w-1/2">
                         <form className="flex flex-col items-center space-y-4">
                             <label htmlFor="voice-search" className="sr-only">Search</label>
                             <div className="relative w-full">

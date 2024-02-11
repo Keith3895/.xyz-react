@@ -24,27 +24,27 @@ export default class Home extends Component {
         ReactGA.send({ hitType: "pageview", page: "/", title: "About me" });
         return (
             <div>
-                <div className="flex w-full bgframe justify-center items-center">
+                <div className="flex w-full bgframe justify-center items-center max-md:flex-col-reverse max-md:mb-4">
                     <div className="lg:w-1/2 lg:h-3/5  flex flex-col justify-center items-center">
                         <div>
-                            <h1 className="text-4xl font-bold mt-20 ml-16">
+                            <h1 className="text-4xl font-bold mt-20 md:ml-16 ml-4">
                                 Hello<span className="text-custom-orange-600 text-4xl font-bold">.</span>
                             </h1>
-                            <h3 className="text-4xl font-bold mt-4 ml-24">
+                            <h3 className="text-4xl font-bold mt-4 md:ml-24 ml-8">
                                 I<span className="text-custom-orange-600 text-4xl font-bold">'</span>m Keith Franklin
                             </h3>
-                            <h1 className="text-4xl font-bold mt-4 ml-20">
+                            <h1 className="text-4xl font-bold mt-4 md:ml-20 ml-6">
                                 Tech Enthusiast<span className="text-custom-orange-600 text-4xl font-bold">.</span>
                             </h1>
-                            <div className="flex flex-row  ml-16 mt-14">
+                            <div className="flex flex-row  md:ml-16 ml-4 mt-14">
                                 <RaisedButton buttonName="Contact me" onClick={() => { window.location.href = "mailto:keith30895@gmail.com" }} />
                                 <FlatButton btClass="ml-4" buttonName="My Résumé" href="./Resume.pdf" download="Resume"/>
                             </div>
                         </div>
 
                     </div>
-                    <div className="lg:w-60 lg:h-1/2 flex items-center justify-center">
-                        <img className=" mt-14 h-auto w-112" src="./hero image.png" alt="" />
+                    <div className="max-md:bg-black lg:w-60 lg:h-1/2 flex items-center justify-center">
+                        <img className=" md:mt-14 h-auto w-112" src="./hero image.png" alt="" />
                     </div>
                 </div>
                 <TickerTape tickers={['Angular', 'React', 'Flutter', 'NodeJS', 'Python', 'web3', 'MongoDB', 'PostgreSQL', 'MySql', 'Kubernetes', 'docker', 'helm']} />
@@ -67,7 +67,7 @@ export default class Home extends Component {
                             description: `A car wash service aggregator app.`,
                         },
                         {
-                            date: "2024-02-15",
+                            date: "Released on 2024-02-15",
                             title: "Rewamp of my portfolio",
                             description: `updated my portfolio with new projects and technologies. And a complete 
                             design overhaul.`,
@@ -84,7 +84,7 @@ export default class Home extends Component {
                             <div className="w-96 text-center text-black text-3xl font-bold font-['Raleway'] leading-10 tracking-widest">ABOUT ME</div>
                         </div>
                     </div>
-                    <div className="w-3/5 text-left text-base font-normal font-['Raleway'] leading-loose">
+                    <div className="w-full md:w-3/5 text-left text-base font-normal font-['Raleway'] leading-loose">
                         <p>
                             Hey there! I'm fueled by a relentless curiosity for all things tech. Currently, I'm proudly steering the tech ship as a Technical Lead at <a target="_blank" rel="noreferrer" href="https://auberginesolutions.com/"
                                 className="hover:underline after:content-['_↗']">Aubergine</a>, where every day is an adventure in innovation.
@@ -98,26 +98,26 @@ export default class Home extends Component {
                     <div className="flex flex-col w-full justify-center items-center lg:pt-20 md:pt-20">
                         <div className="w-3/4 flex flex-row">
 
-                            <div className="w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
+                            <div className="w-1/12 md:w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
 
-                            <div className="w-1/3 h-60 px-5 bg-custom-orange-600 flex-col justify-center items-center inline-flex">
+                            <div className="w-4/5 md:w-1/3 h-60 px-5 bg-custom-orange-600 flex-col justify-center items-center inline-flex">
                                 <div className="text-center"><span className="text-black text-4xl font-bold font-['Raleway'] leading-10">
                                     {this.yearCalc()}
                                 </span><span className="text-black text-4xl font-bold font-['Poppins'] leading-10">+</span></div>
                                 <div className=" text-center text-black text-xl font-bold font-['Raleway'] leading-7">Projects worked on</div>
                             </div>
 
-                            <div className="w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
+                            <div className=" md:w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
                         </div>
 
-                        <div className="w-3/4 flex flex-row">
-                            <div className="w-1/3 h-60 px-5 bg-black flex-col justify-center items-center inline-flex">
+                        <div className="w-full md:w-3/4 flex flex-row">
+                            <div className="w-1/2 md:w-1/3 h-60 px-5 bg-black flex-col justify-center items-center inline-flex">
                                 <div className="text-center"><span className="text-white text-4xl font-bold font-['Raleway'] leading-10">20</span><span className="text-white text-4xl font-bold font-['Poppins'] leading-10">+</span></div>
                                 <div className=" text-center text-white text-xl font-bold font-['Raleway'] leading-7">Projects worked on</div>
                             </div>
-                            <div className="w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
+                            <div className="hidden md:flex md:w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
 
-                            <div className="w-1/3 h-60 px-5 bg-tertiary-600 flex-col justify-center items-center inline-flex">
+                            <div className="w-1/2 md:w-1/3 h-60 px-5 bg-tertiary-600 flex-col justify-center items-center inline-flex">
                                 <div className="text-center"><span className="text-white text-4xl font-bold font-['Raleway'] leading-10">10</span><span className="text-white text-4xl font-bold font-['Poppins'] leading-10">+</span></div>
                                 <div className=" text-center text-white text-xl font-bold font-['Raleway'] leading-7">Clients worked with</div>
                             </div>

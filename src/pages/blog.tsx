@@ -1,13 +1,12 @@
-import { Component, ReactNode } from "react";
-import { Form, useLoaderData } from "react-router-dom";
+import { Component } from "react";
+import { ScrollRestoration, useLoaderData } from "react-router-dom";
 import RaisedButton from "../components/buttons/raisedButton";
 import ReactGA from "react-ga4";
-export async function loader(params: any) {
-    const blog = await getBlog(params.slug);
+export async function loader(loaderObj:any) {
+    const blog = await getBlog(loaderObj.params.slug);
     return blog;
 }
 async function getBlog(slug: string) {
-
     const BUCKET_SLUG = 'beyond-bits-and-chisels-production';
     const BUCKET_READ_KEY = '4698vcBlH88X1QyH3kFkrMwqdcs8q6Ud1AzowkWeBe2CTIeIG3';
 
@@ -80,17 +79,17 @@ class BlogClass extends Component<TBlog> {
     render() {
         ReactGA.send({ hitType: "pageview", page: `/blog/${this.props.slug}`, title: this.props.title });
         return (
-            <div className="p-16 flex flex-col gap-10">
+            <div className=" p-4 md:p-16 flex flex-col gap-10">
                 <nav className="flex justify-between" aria-label="Breadcrumb">
                     <ol className="inline-flex items-center mb-3 sm:mb-0">
                         <li>
-                            <div className="flex items-center text-custom-orange-600">
+                            <a className="flex items-center text-custom-orange-600 hover:underline" href="#/blogs">
                                 Home
-                            </div>
+                            </a>
                         </li>
                         <span className="mx-2 text-gray-400">/</span>
                         <li>
-                            <div className="flex items-center text-tertiary-600">
+                            <div className="flex items-center text-tertiary-600 truncate">
                                 {this.props.title}
                             </div>
                         </li>
@@ -103,13 +102,17 @@ class BlogClass extends Component<TBlog> {
                     <span className="mx-2 text-gray-400">|</span>
                     <div className="text-center text-zinc-500 text-xs font-normal font-['Raleway']">{this.props.published_at}</div>
                 </div>
-                <div className="flex flex-row gap-4">
-                    <div className="w-9/12 " dangerouslySetInnerHTML={{ __html: this.props.metadata.blog_content }}></div>
-                    <div className="w-1/5 flex-col flex gap-12">
+                <div className="flex flex-col md:flex-row gap-4">
+                    <div className="w-full md:w-9/12" dangerouslySetInnerHTML={{ __html: this.props.metadata.blog_content }}></div>
+                    <div className="w-full md:w-1/5 flex-col flex gap-12">
                         <h1 className="text-black text-xl text-base font-bold leading-7">More Posts</h1>
-                        {this.showBlogs(this.state.blogs)}
+                        <div className="flex-row md:flex-col">
+
+                            {this.showBlogs(this.state.blogs)}
+                        </div>
                     </div>
                 </div>
+                {/* comments section */}
                 <div className="flex flex-col gap-4">
                     <h1 className="text-black text-xl font-bold font-['Raleway'] leading-7">Comments</h1>
                     <div className="flex flex-row gap-2 items-center flex-wrap">
@@ -158,7 +161,10 @@ const Blog: React.FC = () => {
     const blog: any = useLoaderData();
     console.log(blog);
     return (
+        <>
         <BlogClass title={blog.title} published_at={blog.published_at} metadata={blog.metadata} slug={blog.slug} />
+        <ScrollRestoration/>
+        </>
     );
 };
 

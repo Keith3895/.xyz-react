@@ -31,7 +31,7 @@ export default class TimeLine extends Component<TimeLineProps> {
                             </div>
                             <div className="mt-3 sm:pe-8">
                                 <h3 className="text-lg font-semibold text-custom-orange-600">{timeline.title}</h3>
-                                <time className="block mb-2 text-sm font-normal leading-none text-white">Released on {timeline.date}</time>
+                                <time className="block mb-2 text-sm font-normal leading-none text-white">{timeline.date}</time>
                                 <p className="text-base font-normal text-gray-400">{timeline.description}</p>
                             </div>
                         </li>

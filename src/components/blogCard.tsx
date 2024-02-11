@@ -17,8 +17,8 @@ export default class BlogCard extends Component<Blog> {
 
     render(): ReactNode {
         return (
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow w-3/12">
-                <a href="#" className="justify-center flex-row ">
+            <div className="md:max-w-sm w-11/12   bg-white border border-gray-200 rounded-lg shadow w-3/12">
+                <a href={`#/blog/${this.props.slug}`} className="justify-center flex flex-row item-center">
                     <img className="rounded-t-lg" src={this.props.thumbnail} alt="" />
                 </a>
                 <div className="p-5 flex flex-row space-x-4">
@@ -26,7 +26,7 @@ export default class BlogCard extends Component<Blog> {
                     <div className="text-center text-zinc-500 text-xs font-normal font-['Raleway']">{this.props.date}</div>
                 </div>
                 <div className="p-5">
-                    <a href="#">
+                    <a href={`#/blog/${this.props.slug}`}>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{this.props.title}</h5>
                     </a>
                     <p className="mb-3 font-normal text-gray-700 line-clamp-3">
