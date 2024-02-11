@@ -104,7 +104,7 @@ export default class Home extends Component {
                                 <div className="text-center"><span className="text-black text-4xl font-bold font-['Raleway'] leading-10">
                                     {this.yearCalc()}
                                 </span><span className="text-black text-4xl font-bold font-['Poppins'] leading-10">+</span></div>
-                                <div className=" text-center text-black text-xl font-bold font-['Raleway'] leading-7">Projects worked on</div>
+                                <div className=" text-center text-black text-xl font-bold font-['Raleway'] leading-7">Years experience</div>
                             </div>
 
                             <div className=" md:w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
