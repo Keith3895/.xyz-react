@@ -17,7 +17,7 @@ export default class BlogCard extends Component<Blog> {
 
     render(): ReactNode {
         return (
-            <div className="md:max-w-sm w-11/12   bg-white border border-gray-200 rounded-lg shadow w-3/12">
+            <div className="md:max-w-sm w-11/12 bg-white border border-gray-200 rounded-lg shadow md:w-3/12">
                 <a href={`#/blog/${this.props.slug}`} className="justify-center flex flex-row item-center">
                     <img className="rounded-t-lg" src={this.props.thumbnail} alt="" />
                 </a>
