@@ -30,7 +30,7 @@ export default class Main extends Component {
                 <header >
                     <NavBar />    
                 </header>
-                <div className="mt-24 md:mt-16 pt-2">
+                <div className="mt-16 pt-2">
                     <RouterProvider router={this.router} />
                 </div>
                 <Footer />
