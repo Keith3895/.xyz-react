@@ -37,7 +37,7 @@ export default class Home extends Component {
                                 Tech Enthusiast<span className="text-custom-orange-600 text-4xl font-bold">.</span>
                             </h1>
                             <div className="flex flex-row  md:ml-16 ml-4 mt-14">
-                                <RaisedButton buttonName="Contact me" onClick={() => { window.location.href = "mailto:keith30895@gmail.com" }} />
+                                <RaisedButton buttonName="Contact me" onClick={() => { window.location.href = "mailto:contact.keithfranklin@gmail.com" }} />
                                 <FlatButton btClass="ml-4" buttonName="My Résumé" href="./Resume.pdf" download="Resume"/>
                             </div>
                         </div>
@@ -92,7 +92,7 @@ export default class Home extends Component {
                         <p>With {this.yearCalc()}+ years of immersion in the tech realm under my belt, I've become somewhat of a tech explorer. From tinkering with new applications to diving headfirst into the latest tech trends, I'm always on the lookout for the next big thing.</p>
                         <p>Beyond my professional pursuits, I find solace in the melodic world of music. Dreaming of owning a record player and indulging in the crisp sounds of my favourite tunes is a personal goal I'm eagerly working towards.</p>
                         <p>If you're as jazzed about tech and innovation as I am, let's connect! Swing by my <a target="_blank" rel="noreferrer" href="https://github.com/Keith3895"
-                            className="hover:underline after:content-['_↗']">GitHub</a> to see what I've been cooking up lately, or drop me a message on <a target="_blank" rel="noreferrer" href="mailto:keith30895@gmail.com" className="hover:underline after:content-['_↗']">link</a> for a chat about all things tech (or music, I'm game for that too!).</p>
+                            className="hover:underline after:content-['_↗']">GitHub</a> to see what I've been cooking up lately, or drop me a message on <a target="_blank" rel="noreferrer" href="mailto:contact.keithfranklin@gmail.com" className="hover:underline after:content-['_↗']">link</a> for a chat about all things tech (or music, I'm game for that too!).</p>
                         Here's to endless exploration and innovation!
                     </div>
                     <div className="flex flex-col w-full justify-center items-center lg:pt-20 md:pt-20">

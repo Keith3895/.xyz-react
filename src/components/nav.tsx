@@ -31,14 +31,14 @@ export default class NavBar extends Component {
                             {item.name}
                         </a>
                     ))}
-                    <a href="mailto:keith30895@gmail.com" className="w-36 h-10 bg-custom-orange-600 rounded-3xl justify-center items-center gap-2.5 inline-flex ">
+                    <a href="mailto:contact.keithfranklin@gmail.com" className="w-36 h-10 bg-custom-orange-600 rounded-3xl justify-center items-center gap-2.5 inline-flex ">
                         <div className="text-center text-black text-base font-bold font-['Raleway']">CONTACT ME</div>
                     </a>
                 </div>
 
 
                 <div className="md:hidden flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <a href="mailto:keith30895@gmail.com" className=" w-36 h-10 bg-custom-orange-600 rounded-3xl justify-center items-center gap-2.5 inline-flex ">
+                    <a href="mailto:contact.keithfranklin@gmail.com" className=" w-36 h-10 bg-custom-orange-600 rounded-3xl justify-center items-center gap-2.5 inline-flex ">
                         <div className="text-center text-black text-base font-bold font-['Raleway']">CONTACT ME</div>
                     </a>
                     <button type="button"
