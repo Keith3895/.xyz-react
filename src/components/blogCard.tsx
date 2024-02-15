@@ -11,10 +11,6 @@ type Blog = {
 
 export default class BlogCard extends Component<Blog> {
 
-    constructor(props: any) {
-        super(props);
-    }
-
     render(): ReactNode {
         return (
             <div className="md:max-w-sm w-11/12 bg-white border border-gray-200 rounded-lg shadow md:w-3/12">
