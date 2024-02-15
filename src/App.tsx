@@ -6,11 +6,8 @@ class App extends Component {
   constructor(props: any) {
     super(props);
 
-
     ReactGA.initialize("G-XT4B2SFEKK");
   }
-
-
 
   render() {
     return (
