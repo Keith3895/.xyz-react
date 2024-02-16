@@ -1,7 +1,8 @@
-import { Component } from "react";
+'use client';
 import { ButtonProps } from "./flatButton";
+import React from "react";
 
-export default class RaisedButton extends Component<ButtonProps> {
+export default class RaisedButton extends React.Component<ButtonProps> {
     constructor(props: any) {
         super(props);
     }

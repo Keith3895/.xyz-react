@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React from "react";
 
 
 export type ButtonProps = {
@@ -9,7 +9,7 @@ export type ButtonProps = {
     download?: string;
 };
 
-export default class FlatButton extends Component<ButtonProps> {
+export default class FlatButton extends React.Component<ButtonProps> {
     constructor(props: any) {
         super(props);
     }

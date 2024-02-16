@@ -1,11 +1,11 @@
-import { Component } from "react"
+import React from "react";
 
 
 type TickerTapeProps = {
     tickers: string[]
 };
 
-export default class TickerTape extends Component<TickerTapeProps> {
+export default class TickerTape extends React.Component<TickerTapeProps> {
     constructor(props: any) {
         super(props);
     }

@@ -1,4 +1,5 @@
-import { Component, ReactNode } from "react";
+import React from "react";
+import { ReactNode } from "react";
 
 type Timeline = {
     date: string;
@@ -11,7 +12,7 @@ type TimeLineProps = {
     timeline: Timeline[];
 };
 
-export default class TimeLine extends Component<TimeLineProps> {
+export default class TimeLine extends React.Component<TimeLineProps> {
     constructor(props: any) {
         super(props);
     }

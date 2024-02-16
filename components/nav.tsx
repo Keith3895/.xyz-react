@@ -1,7 +1,7 @@
-import { Component, ReactNode } from "react";
-import { NavLink } from "react-router-dom";
+'use client';
+import React, { ReactNode } from "react";
 
-export default class NavBar extends Component {
+export default class NavBar extends React.Component {
     state = { open: false };
     constructor(props: any) {
         super(props);
@@ -10,7 +10,7 @@ export default class NavBar extends Component {
     }
     navigation = [
         { name: 'About me', href: '/' },
-        { name: 'Blogs', href: '#/blogs' },
+        { name: 'Blogs', href: '/blog' },
         { name: 'Projects', href: '#' },
     ];
     toggleClass() {

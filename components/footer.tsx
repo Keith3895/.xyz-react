@@ -1,6 +1,7 @@
-import { Component, ReactNode } from "react";
+'use client';
+import React, { ReactNode } from "react";
 
-export default class Footer extends Component {
+export default class Footer extends React.Component {
 
 
     render(): ReactNode {
