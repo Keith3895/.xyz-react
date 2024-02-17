@@ -1,5 +1,5 @@
-import { getFormattedDate } from "../../../cosmic/utils";
-import BlogCardComponent from "../../../components/blogCard";
+import { getFormattedDate } from "../../utils";
+import BlogCardComponent from "../../../../components/blogCard";
 
 export type PostType = {
   id: string

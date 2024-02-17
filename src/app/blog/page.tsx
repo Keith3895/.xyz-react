@@ -1,8 +1,34 @@
 // app/blog/page.tsx
-
+import { LoadMore } from "@/cosmic/blocks/pagination/LoadMore";
 import RaisedButton from "../../../components/buttons/raisedButton";
-import { BlogList } from "../../../cosmic/blocks/blog/BlogList";
+import { BlogList } from "../../cosmic/blocks/blog/BlogList";
+import { cosmic } from "@/cosmic/client";
+
+
+const LIMIT = 3;
+
+async function loadMorePosts(offset: number = 0) {
+    "use server";
+    const nextOffset = LIMIT + offset;
+    return [
+        <BlogList
+            key={offset}
+            query={{ type: "blog-posts" }}
+            sort="-order"
+            limit={LIMIT}
+            skip={nextOffset}
+            noWrap
+        />,
+        nextOffset,
+    ] as const;
+}
+
 export default async function BlogListPage() {
+    const skip = 0;
+    const { total } = await cosmic.objects
+        .find({ type: "blog-posts" })
+        .props("id")
+        .limit(1);
     return (
         <div className="flex flex-col space-y-4 my-10">
             <div className="flex flex-row justify-center mt-10 mb-10">
@@ -32,14 +58,23 @@ export default async function BlogListPage() {
             </div>
 
 
-            <div className="flex flex-row gap-12 flex-wrap justify-center">
-                <BlogList
-                    query={{ type: "blog-posts" }}
-                    sort="-created_at"
-                    limit={10}
-                    skip={0}
-                    noWrap={true}
-                />
+            <div >
+                <LoadMore
+                    loadMoreAction={loadMorePosts}
+                    initialOffset={skip}
+                    total={total}
+                    limit={LIMIT}
+                    className="flex flex-row gap-12 flex-wrap justify-center"
+                >
+                    <BlogList
+                        query={{ type: "blog-posts" }}
+                        sort="-created_at"
+                        limit={LIMIT}
+                        skip={skip}
+                        noWrap={true}
+                    />
+                </LoadMore>
+
             </div>
 
         </div>

@@ -1,6 +1,6 @@
-import { cosmic } from "../../../../cosmic/client";
-import { SingleBlog } from "../../../../cosmic/blocks/blog/SingleBlog";
-import { Comments } from "../../../../cosmic/blocks/comments/Comments";
+import { cosmic } from "../../../cosmic/client";
+import { SingleBlog } from "../../../cosmic/blocks/blog/SingleBlog";
+import { Comments } from "../../../cosmic/blocks/comments/Comments";
 
 
 
