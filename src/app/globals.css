@@ -36,3 +36,14 @@
 
   background-image: url('./Frame 1.png');
 }
+
+.blogContent ol{
+  list-style-type: decimal;
+  counter-reset: item;
+  padding-inline-start: 40px;
+}
+.blogContent ul{
+  list-style-type: disc;
+  counter-reset: item;
+  padding-inline-start: 40px;
+}

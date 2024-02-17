@@ -77,7 +77,9 @@ export async function SingleBlog({
                                 width={500} height={500} quality={100} loading="lazy"
                             />
                         </div>
-                        <div className="w-full" dangerouslySetInnerHTML={{ __html: blog.metadata.content }}></div>
+                        <div className="w-full tracking-wide font-medium blogContent">
+                            <span dangerouslySetInnerHTML={{ __html: blog.metadata.content }}></span>
+                        </div>
                     </div>
                     <div className="w-full md:w-1/5 flex-col flex gap-12">
                         <h1 className="text-black text-xl text-base font-bold leading-7">More Posts</h1>
