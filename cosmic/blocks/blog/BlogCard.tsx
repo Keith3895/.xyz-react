@@ -6,6 +6,9 @@ export type PostType = {
   title: string
   slug: string
   metadata: {
+    seo:{
+      description: string
+    },
     categories: any
     image: {
       imgix_url: string
@@ -14,9 +17,6 @@ export type PostType = {
     author: {
       title: string
       metadata: {
-        seo:{
-          description: string
-        }
         image: {
           imgix_url: string
         }
