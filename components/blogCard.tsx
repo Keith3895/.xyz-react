@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 
@@ -17,11 +18,11 @@ export default class BlogCard extends React.Component<Blog> {
         return (
             <div className="md:max-w-sm w-11/12 bg-white border border-gray-200 rounded-lg shadow md:w-3/12">
                 <Link href={`blog/${this.props.slug}`} className="justify-center flex flex-row item-center">
-                    <img className="rounded-t-lg" src={this.props.thumbnail} alt="" />
+                    <Image className="rounded-t-lg" src={this.props.thumbnail || ''} alt="" width={500} height={500} quality={100} loading="lazy"/>
                 </Link>
                 <div className="p-5 flex flex-row space-x-4">
-                    <div className="text-xs font-normal font-['Raleway']"> {this.props.category} </div>
-                    <div className="text-center text-zinc-500 text-xs font-normal font-['Raleway']">{this.props.date}</div>
+                    <div className="text-xs font-normal "> {this.props.category} </div>
+                    <div className="text-center text-zinc-500 text-xs font-normal ">{this.props.date}</div>
                 </div>
                 <div className="p-5">
                     <Link href={`blog/${this.props.slug}`}>

@@ -5,7 +5,7 @@ describe('BlogCard', () => {
     const blog = {
         title: 'Test Title',
         description: 'Test Description',
-        thumbnail: 'Test Thumbnail',
+        thumbnail: 'https://imgix.cosmicjs.com/cb1152e0-ccd3-11ee-a584-65599426e889-Our-Amazing-Adventure.jpg',
         category: 'Test Category',
         date: 'Test Date',
         slug: 'test-slug',
@@ -14,7 +14,8 @@ describe('BlogCard', () => {
     it('renders the blog thumbnail', () => {
         render(<BlogCard {...blog} />);
         const img = screen.getByRole('img');
-        expect(img).toHaveAttribute('src', blog.thumbnail);
+        // expect(img).toHaveAttribute('src', blog.thumbnail);
+        expect(img).toHaveAttribute('src', `/_next/image?url=${encodeURIComponent(blog.thumbnail)}&w=1080&q=100`);
     });
 
     it('renders the blog category', () => {
@@ -57,10 +58,9 @@ describe('BlogCard', () => {
             slug: 'test-slug',
         };
         render(<BlogCard {...blogNeg} />);
-        // eslint-disable-next-line testing-library/prefer-presence-queries
         expect(screen.queryByRole('img')).toBeInTheDocument();
         const img = screen.queryByRole('img') as HTMLImageElement;
-        expect(img.src).toBe('');
+        expect(img.src).toBe('http://localhost/');
     });
     it('renders homepage unchanged', () => {
         const { container } = render(<BlogCard {...blog} />);

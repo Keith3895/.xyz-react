@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { cosmic } from "../../client"
 import { getFormattedDate } from "../../utils"
 import ShowRecentBlogs from "./showRecentBlogs"
+import Image from "next/image"
 
 export async function SingleBlog({
     query,
@@ -41,7 +42,7 @@ export async function SingleBlog({
                 </nav>
 
                 <div className="inline-flex items-center mb-3 sm:mb-0">
-                    <div className="text-xs font-normal font-['Raleway'] text-custom-orange-400 ">
+                    <div className="text-xs font-normal  text-custom-orange-400 ">
                         {blog.metadata.categories.map((category: any) => {
                             const categoryBackgroundColor = `${category.metadata.color}22`
                             return (
@@ -59,7 +60,7 @@ export async function SingleBlog({
                         })}
                     </div>
                     <span className="mx-2 text-gray-400">|</span>
-                    <div className="text-center text-zinc-500 text-xs font-normal font-['Raleway']">
+                    <div className="text-center text-zinc-500 text-xs font-normal ">
                         {date}
                     </div>
                 </div>
@@ -69,10 +70,11 @@ export async function SingleBlog({
                             {blog.title}
                         </h1>
                         <div className="mb-10 w-full overflow-hidden rounded-xl">
-                            <img
+                            <Image
                                 src={`${blog.metadata.image.imgix_url}?w=2000&auto=format,compression`}
                                 alt={blog.title}
                                 className="aspect-video w-full object-cover"
+                                width={500} height={500} quality={100} loading="lazy"
                             />
                         </div>
                         <div className="w-full" dangerouslySetInnerHTML={{ __html: blog.metadata.content }}></div>

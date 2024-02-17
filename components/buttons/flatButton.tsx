@@ -16,12 +16,12 @@ export default class FlatButton extends React.Component<ButtonProps> {
     render() {
         if (this.props.href) {
             return (<a href={this.props.href} download={this.props.download} className={`w-36 h-10 bg-white border-4 border-custom-orange-600 justify-center items-center cursor-pointer inline-flex hover:bg-grey active:bg-custom-orange-100 ${this.props.btClass}`}>
-                <div className="text-center text-black text-base font-bold font-['Raleway']" >{this.props.buttonName}</div>
+                <div className="text-center text-black text-base font-bold " >{this.props.buttonName}</div>
             </a>);
         }
         else {
             return (<button onClick={this.props.onClick} type='button' className={`w-36 h-10 bg-white border-4 border-custom-orange-600 justify-center items-center cursor-pointer inline-flex hover:bg-grey active:bg-custom-orange-100 ${this.props.btClass}`}>
-                <div className="text-center text-black text-base font-bold font-['Raleway']" >{this.props.buttonName}</div>
+                <div className="text-center text-black text-base font-bold " >{this.props.buttonName}</div>
             </button>);
         }
 

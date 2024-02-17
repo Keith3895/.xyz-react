@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import FlatButton from "../../components/buttons/flatButton";
 import RaisedButton from "../../components/buttons/raisedButton";
 import TickerTape from "../../components/tickerTape";
@@ -45,7 +46,7 @@ export default class Home extends React.Component {
 
           </div>
           <div className="max-md:bg-black lg:w-60 lg:h-1/2 flex items-center justify-center">
-            <img className=" md:mt-14 h-auto w-112" src="./hero image.png" alt="" />
+            <Image className=" md:mt-14 h-auto w-112" src={"/hero image.png"} alt="" width={500} height={500} quality={100} loading="lazy"/>
           </div>
         </div>
         <TickerTape tickers={['Angular', 'React', 'Flutter', 'NodeJS', 'Python', 'web3', 'MongoDB', 'PostgreSQL', 'MySql', 'Kubernetes', 'docker', 'helm']} />
@@ -82,10 +83,10 @@ export default class Home extends React.Component {
         <div className="flex flex-col p-10 justify-center items-center space-y-10">
           <div className="flex flex-row justify-center">
             <div className="w-96 h-20 bg-white border-8 border-custom-orange-600 justify-center items-center inline-flex">
-              <div className="w-96 text-center text-black text-3xl font-bold font-['Raleway'] leading-10 tracking-widest">ABOUT ME</div>
+              <div className="w-96 text-center text-black text-3xl font-bold  leading-10 tracking-widest">ABOUT ME</div>
             </div>
           </div>
-          <div className="w-full md:w-3/5 text-left text-base font-normal font-['Raleway'] leading-loose">
+          <div className="w-full md:w-3/5 text-left text-base font-normal  leading-loose">
             <p>
               Hey there! I&apos;m fueled by a relentless curiosity for all things tech. Currently, I&apos;m proudly steering the tech ship as a Technical Lead at <a target="_blank" rel="noreferrer" href="https://auberginesolutions.com/"
                 className="hover:underline after:content-['_↗']">Aubergine</a>, where every day is an adventure in innovation.
@@ -102,10 +103,10 @@ export default class Home extends React.Component {
               <div className="w-1/12 md:w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
 
               <div className="w-4/5 md:w-1/3 h-60 px-5 bg-custom-orange-600 flex-col justify-center items-center inline-flex">
-                <div className="text-center"><span className="text-black text-4xl font-bold font-['Raleway'] leading-10">
+                <div className="text-center"><span className="text-black text-4xl font-bold  leading-10">
                   {this.yearCalc()}
                 </span><span className="text-black text-4xl font-bold font-['Poppins'] leading-10">+</span></div>
-                <div className=" text-center text-black text-xl font-bold font-['Raleway'] leading-7">Years experience</div>
+                <div className=" text-center text-black text-xl font-bold  leading-7">Years experience</div>
               </div>
 
               <div className=" md:w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
@@ -113,14 +114,14 @@ export default class Home extends React.Component {
 
             <div className="w-full md:w-3/4 flex flex-row">
               <div className="w-1/2 md:w-1/3 h-60 px-5 bg-black flex-col justify-center items-center inline-flex">
-                <div className="text-center"><span className="text-white text-4xl font-bold font-['Raleway'] leading-10">20</span><span className="text-white text-4xl font-bold font-['Poppins'] leading-10">+</span></div>
-                <div className=" text-center text-white text-xl font-bold font-['Raleway'] leading-7">Projects worked on</div>
+                <div className="text-center"><span className="text-white text-4xl font-bold  leading-10">20</span><span className="text-white text-4xl font-bold font-['Poppins'] leading-10">+</span></div>
+                <div className=" text-center text-white text-xl font-bold  leading-7">Projects worked on</div>
               </div>
               <div className="hidden md:flex md:w-1/3 h-60 px-5 pt-24 pb-11 flex-col justify-end items-center inline-flex"></div>
 
               <div className="w-1/2 md:w-1/3 h-60 px-5 bg-tertiary-600 flex-col justify-center items-center inline-flex">
-                <div className="text-center"><span className="text-white text-4xl font-bold font-['Raleway'] leading-10">10</span><span className="text-white text-4xl font-bold font-['Poppins'] leading-10">+</span></div>
-                <div className=" text-center text-white text-xl font-bold font-['Raleway'] leading-7">Clients worked with</div>
+                <div className="text-center"><span className="text-white text-4xl font-bold  leading-10">10</span><span className="text-white text-4xl font-bold font-['Poppins'] leading-10">+</span></div>
+                <div className=" text-center text-white text-xl font-bold  leading-7">Clients worked with</div>
               </div>
             </div>
           </div>

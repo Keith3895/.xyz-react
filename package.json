@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint", 
+    "lint": "next lint",
     "test": "jest",
     "testWatch": "jest --watch",
     "tag": "git tag -a $npm_package_version -m $npm_package_version && git push origin $npm_package_version"
@@ -15,6 +15,7 @@
     "@cosmicjs/sdk": "^1.0.11",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "@vercel/speed-insights": "^1.0.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.331.0",

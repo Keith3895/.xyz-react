@@ -1,16 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600;700&display=swap');
-body {
-  margin: 0;
-  font-family: 'Raleway', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #E8E9EB;
+
+
+@layer base {
+  body {
+    margin: 0;
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: "Raleway", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #E8E9EB;
+  }
 }
 
-.test::before{
+.test::before {
   content: " ";
   position: absolute;
   display: block;
@@ -27,8 +31,8 @@ body {
   transform: skew(-10deg, 0deg);
 }
 
-.bgframe{
+.bgframe {
   background-size: cover;
-  
+
   background-image: url('./Frame 1.png');
 }

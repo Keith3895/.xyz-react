@@ -7,7 +7,7 @@ export default async function BlogListPage() {
         <div className="flex flex-col space-y-4 my-10">
             <div className="flex flex-row justify-center mt-10 mb-10">
                 <div className="w-11/12 md:w-1/2 h-20 bg-white border-8 border-orange-400 justify-center items-center inline-flex">
-                    <div className="text-center text-black text-xl md:text-3xl font-bold font-['Raleway'] leading-10 tracking-widest">Beyond bits and chissels</div>
+                    <div className="text-center text-black text-xl md:text-3xl font-bold  leading-10 tracking-widest">Beyond bits and chissels</div>
                 </div>
             </div>
             {/* search bar */}

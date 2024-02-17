@@ -49,7 +49,7 @@ exports[`Home renders homepage unchanged 1`] = `
               type="button"
             >
               <div
-                class="text-center text-black text-base font-bold font-['Raleway']"
+                class="text-center text-black text-base font-bold "
               >
                 Contact me
               </div>
@@ -60,7 +60,7 @@ exports[`Home renders homepage unchanged 1`] = `
               href="./Resume.pdf"
             >
               <div
-                class="text-center text-black text-base font-bold font-['Raleway']"
+                class="text-center text-black text-base font-bold "
               >
                 My Résumé
               </div>
@@ -74,7 +74,14 @@ exports[`Home renders homepage unchanged 1`] = `
         <img
           alt=""
           class=" md:mt-14 h-auto w-112"
-          src="./hero image.png"
+          data-nimg="1"
+          decoding="async"
+          height="500"
+          loading="lazy"
+          src="/_next/image?url=%2Fhero%20image.png&w=1080&q=100"
+          srcset="/_next/image?url=%2Fhero%20image.png&w=640&q=100 1x, /_next/image?url=%2Fhero%20image.png&w=1080&q=100 2x"
+          style="color: transparent;"
+          width="500"
         />
       </div>
     </div>
@@ -369,14 +376,14 @@ exports[`Home renders homepage unchanged 1`] = `
           class="w-96 h-20 bg-white border-8 border-custom-orange-600 justify-center items-center inline-flex"
         >
           <div
-            class="w-96 text-center text-black text-3xl font-bold font-['Raleway'] leading-10 tracking-widest"
+            class="w-96 text-center text-black text-3xl font-bold  leading-10 tracking-widest"
           >
             ABOUT ME
           </div>
         </div>
       </div>
       <div
-        class="w-full md:w-3/5 text-left text-base font-normal font-['Raleway'] leading-loose"
+        class="w-full md:w-3/5 text-left text-base font-normal  leading-loose"
       >
         <p>
           Hey there! I'm fueled by a relentless curiosity for all things tech. Currently, I'm proudly steering the tech ship as a Technical Lead at 
@@ -437,7 +444,7 @@ exports[`Home renders homepage unchanged 1`] = `
               class="text-center"
             >
               <span
-                class="text-black text-4xl font-bold font-['Raleway'] leading-10"
+                class="text-black text-4xl font-bold  leading-10"
               >
                 6
               </span>
@@ -448,7 +455,7 @@ exports[`Home renders homepage unchanged 1`] = `
               </span>
             </div>
             <div
-              class=" text-center text-black text-xl font-bold font-['Raleway'] leading-7"
+              class=" text-center text-black text-xl font-bold  leading-7"
             >
               Years experience
             </div>
@@ -467,7 +474,7 @@ exports[`Home renders homepage unchanged 1`] = `
               class="text-center"
             >
               <span
-                class="text-white text-4xl font-bold font-['Raleway'] leading-10"
+                class="text-white text-4xl font-bold  leading-10"
               >
                 20
               </span>
@@ -478,7 +485,7 @@ exports[`Home renders homepage unchanged 1`] = `
               </span>
             </div>
             <div
-              class=" text-center text-white text-xl font-bold font-['Raleway'] leading-7"
+              class=" text-center text-white text-xl font-bold  leading-7"
             >
               Projects worked on
             </div>
@@ -493,7 +500,7 @@ exports[`Home renders homepage unchanged 1`] = `
               class="text-center"
             >
               <span
-                class="text-white text-4xl font-bold font-['Raleway'] leading-10"
+                class="text-white text-4xl font-bold  leading-10"
               >
                 10
               </span>
@@ -504,7 +511,7 @@ exports[`Home renders homepage unchanged 1`] = `
               </span>
             </div>
             <div
-              class=" text-center text-white text-xl font-bold font-['Raleway'] leading-7"
+              class=" text-center text-white text-xl font-bold  leading-7"
             >
               Clients worked with
             </div>
