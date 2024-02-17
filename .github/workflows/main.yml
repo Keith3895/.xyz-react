@@ -13,7 +13,6 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   test:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -32,7 +31,6 @@ jobs:
     - name: Run test
       run: npm test
   lint:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
