@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import BlogCard from '../../components/blogCard';
+import BlogCard from '../../src/components/blogCard';
 
 describe('BlogCard', () => {
     const blog = {

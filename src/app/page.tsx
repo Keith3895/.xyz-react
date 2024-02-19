@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import FlatButton from "../../components/buttons/flatButton";
-import RaisedButton from "../../components/buttons/raisedButton";
-import TickerTape from "../../components/tickerTape";
-import TimeLine from "../../components/timeline";
+import FlatButton from "../components/buttons/flatButton";
+import RaisedButton from "../components/buttons/raisedButton";
+import TickerTape from "../components/tickerTape";
+import TimeLine from "../components/timeline";
 // import ReactGA from "react-ga4";
 import React from "react";
 
