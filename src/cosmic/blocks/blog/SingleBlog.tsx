@@ -34,7 +34,7 @@ export async function SingleBlog({
                         </li>
                         <span className="mx-2 text-gray-400">/</span>
                         <li>
-                            <div className="flex items-center text-tertiary-600 truncate">
+                            <div className="flex items-center text-tertiary-600 truncate text-wrap">
                                 {blog.title}
                             </div>
                         </li>
