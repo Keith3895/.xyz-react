@@ -48,9 +48,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [setup-job]
     env:
-      PROJECT_ID: ${{ needs.set-variables.outputs.PROJECT_ID }}
-      REGION1: ${{ needs.set-variables.outputs.REGION1 }}
-      REGION2: ${{ needs.set-variables.outputs.REGION2 }}
+      PROJECT_ID: ${{ needs.setup-job.outputs.PROJECT_ID }}
+      REGION1: ${{ needs.setup-job.outputs.REGION1 }}
+      REGION2: ${{ needs.setup-job.outputs.REGION2 }}
     steps:
       - uses: actions/checkout@v2
       - name: Read exported variable
