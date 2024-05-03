@@ -25,6 +25,10 @@ env:
 jobs:
   setup-job:
     runs-on: ubuntu-latest
+    outputs:
+      PROJECT_ID: ${{ steps.set-variables.outputs.PROJECT_ID }}
+      REGION1: ${{ steps.set-variables.outputs.REGION1 }}
+      REGION2: ${{ steps.set-variables.outputs.REGION2 }}
     steps:
       - uses: actions/checkout@v2
       - name: Set Env Values
