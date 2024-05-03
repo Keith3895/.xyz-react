@@ -29,23 +29,23 @@ jobs:
   setup-job:
     runs-on: ubuntu-latest
     outputs:
-      PROJECT_ID: ${{steps}}
+      PROJECT_ID: ${{steps.set-variable.outputs.PROJECT_ID}}
     steps:
       - uses: actions/checkout@v2
       - name: Set Env Values
         id: set-variables
         run: |
-          if [ ${{ inputs.environment }} == 'Production']; then
+          if [ ${{ inputs.environment }} == 'Production' ]; then
             echo "PROJECT_ID=prod" >> $GITHUB_ENV
             echo "Region1=us-east1" >> $GITHUB_ENV
             echo "Region2=us-west1" >> $GITHUB_ENV
           else
             echo "Region1=us-central1" >> $GITHUB_ENV
           fi
-          if [ ${{ inputs.environment }} == 'Staging']; then
+          if [ ${{ inputs.environment }} == 'Staging' ]; then
             echo "PROJECT_ID=staging-421902" >> $GITHUB_ENV
           fi
-          if [ ${{ inputs.environment }} == 'Production']; then
+          if [ ${{ inputs.environment }} == 'Develop' ]; then
             echo "PROJECT_ID=develop-421902" >> $GITHUB_ENV
           fi
         shell: bash
