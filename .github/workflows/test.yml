@@ -64,5 +64,5 @@ jobs:
           echo "PROJECT_ID ENV: ${{ env.PROJECT_ID }}"
           echo "ARTIFACT_PROJECT_ID ENV: ${{ env.ARTIFACT_PROJECT_ID }}"
           echo "GAR_LOCATION ENV: ${{ env.GAR_LOCATION }}"
-          echo "tag: ${{ input.tags }}"
+          echo "tag: ${{ inputs.tags }}"
           
