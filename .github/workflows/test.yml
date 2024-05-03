@@ -31,32 +31,32 @@ jobs:
         id: set-variables
         run: |
           if [ ${{ inputs.environment }} == 'Production' ]; then
-            echo "PROJECT_ID=prod" >> $GITHUB_ENV
-            echo "REGION1=us-east1" >> $GITHUB_ENV
-            echo "REGION2=us-west1" >> $GITHUB_ENV
+            echo "PROJECT_ID=prod" >> $GITHUB_OUTPUT
+            echo "REGION1=us-east1" >> $GITHUB_OUTPUT
+            echo "REGION2=us-west1" >> $GITHUB_OUTPUT
           else
-            echo "REGION1=us-central1" >> $GITHUB_ENV
+            echo "REGION1=us-central1" >> $GITHUB_OUTPUT
           fi
           if [ ${{ inputs.environment }} == 'Staging' ]; then
-            echo "PROJECT_ID=staging-421902" >> $GITHUB_ENV
+            echo "PROJECT_ID=staging-421902" >> $GITHUB_OUTPUT
           fi
           if [ ${{ inputs.environment }} == 'Develop' ]; then
-            echo "PROJECT_ID=develop-421902" >> $GITHUB_ENV
+            echo "PROJECT_ID=develop-421902" >> $GITHUB_OUTPUT
           fi
         shell: bash
-      - name: Export Values
-        run: |
-           echo "ENV: ${{ env.PROJECT_ID }}"
-           echo "ENV: ${{ env.REGION1 }}"
-           echo "ENV: ${{ env.REGION2 }}"
   subs:
     runs-on: ubuntu-latest
     needs: [setup-job]
+    env:
+      PROJECT_ID: ${{ needs.set-variables.outputs.PROJECT_ID }}
+      REGION1: ${{ needs.set-variables.outputs.REGION1 }}
+      REGION2: ${{ needs.set-variables.outputs.REGION2 }}
     steps:
       - uses: actions/checkout@v2
       - name: Read exported variable
         run: |
           echo "PROJECT_ID ENV: ${{ env.PROJECT_ID }}"
+          echo "PROJECT_ID ENV: ${{ env.REGION1 }}"
           echo "ARTIFACT_PROJECT_ID ENV: ${{ env.ARTIFACT_PROJECT_ID }}"
           echo "GAR_LOCATION ENV: ${{ env.GAR_LOCATION }}"
           echo "tag: ${{ inputs.tags }}"
