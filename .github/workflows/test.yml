@@ -25,8 +25,6 @@ env:
 jobs:
   setup-job:
     runs-on: ubuntu-latest
-    outputs:
-      PROJECT_ID: ${{steps.set-variable.outputs.PROJECT_ID}}
     steps:
       - uses: actions/checkout@v2
       - name: Set Env Values
@@ -34,10 +32,10 @@ jobs:
         run: |
           if [ ${{ inputs.environment }} == 'Production' ]; then
             echo "PROJECT_ID=prod" >> $GITHUB_ENV
-            echo "Region1=us-east1" >> $GITHUB_ENV
-            echo "Region2=us-west1" >> $GITHUB_ENV
+            echo "REGION1=us-east1" >> $GITHUB_ENV
+            echo "REGION2=us-west1" >> $GITHUB_ENV
           else
-            echo "Region1=us-central1" >> $GITHUB_ENV
+            echo "REGION1=us-central1" >> $GITHUB_ENV
           fi
           if [ ${{ inputs.environment }} == 'Staging' ]; then
             echo "PROJECT_ID=staging-421902" >> $GITHUB_ENV
@@ -62,5 +60,4 @@ jobs:
           echo "ARTIFACT_PROJECT_ID ENV: ${{ env.ARTIFACT_PROJECT_ID }}"
           echo "GAR_LOCATION ENV: ${{ env.GAR_LOCATION }}"
           echo "tag: ${{ inputs.tags }}"
-          echo "PROJECT_ID output: ${{ needs.setup-job.outputs.PROJECT_ID }}"
           
