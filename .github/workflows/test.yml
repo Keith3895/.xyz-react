@@ -21,9 +21,6 @@ env:
  ARTIFACT_PROJECT_ID: artifact-registry-421902 
  GAR_LOCATION: us-central1  # TODO: update Artifact Registry location
  SERVICE: alignmt-platform # TODO: update Cloud Run service name
- 
- PROJECT_ID: artifact-registry-421902 
- REGION: YOUR_SERVICE_REGION # TODO: update Cloud Run service region
 
 jobs:
   setup-job:
@@ -65,4 +62,5 @@ jobs:
           echo "ARTIFACT_PROJECT_ID ENV: ${{ env.ARTIFACT_PROJECT_ID }}"
           echo "GAR_LOCATION ENV: ${{ env.GAR_LOCATION }}"
           echo "tag: ${{ inputs.tags }}"
+          echo "PROJECT_ID output: ${{ needs.setup-job.outputs.PROJECT_ID }}"
           
