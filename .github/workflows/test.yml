@@ -1,0 +1,67 @@
+name: Build docker image
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy.'
+        required: true
+        type: choice
+        options:
+        - Develop
+        - Staging
+        - Production
+      tags:
+        description: 'the Tag that has to be deployed.'
+        required: true
+        type: string
+
+
+env:
+ ARTIFACT_PROJECT_ID: artifact-registry-421902 
+ GAR_LOCATION: us-central1  # TODO: update Artifact Registry location
+ SERVICE: alignmt-platform # TODO: update Cloud Run service name
+ 
+ PROJECT_ID: artifact-registry-421902 
+ REGION: YOUR_SERVICE_REGION # TODO: update Cloud Run service region
+
+jobs:
+  setup-job:
+    runs-on: ubuntu-latest
+    outputs:
+      PROJECT_ID: ${{steps}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Env Values
+        id: set-variables
+        run: |
+          if [ ${{ inputs.environment }} == 'Production']; then
+            echo "PROJECT_ID=prod" >> $GITHUB_ENV
+            echo "Region1=us-east1" >> $GITHUB_ENV
+            echo "Region2=us-west1" >> $GITHUB_ENV
+          else
+            echo "Region1=us-central1" >> $GITHUB_ENV
+          fi
+          if [ ${{ inputs.environment }} == 'Staging']; then
+            echo "PROJECT_ID=staging-421902" >> $GITHUB_ENV
+          fi
+          if [ ${{ inputs.environment }} == 'Production']; then
+            echo "PROJECT_ID=develop-421902" >> $GITHUB_ENV
+          fi
+        shell: bash
+      - name: Export Values
+        run: |
+           echo "ENV: ${{ env.PROJECT_ID }}"
+           echo "ENV: ${{ env.REGION1 }}"
+           echo "ENV: ${{ env.REGION2 }}"
+  subs:
+    runs-on: ubuntu-latest
+    needs: [setup-job]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Read exported variable
+        run: |
+          echo "PROJECT_ID ENV: ${{ env.PROJECT_ID }}"
+          echo "ARTIFACT_PROJECT_ID ENV: ${{ env.ARTIFACT_PROJECT_ID }}"
+          echo "GAR_LOCATION ENV: ${{ env.GAR_LOCATION }}"
+          
