@@ -30,7 +30,7 @@ jobs:
       REGION1: ${{ steps.set-variables.outputs.REGION1 }}
       REGION2: ${{ steps.set-variables.outputs.REGION2 }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: Set Env Values
         id: set-variables
         run: |
@@ -56,7 +56,7 @@ jobs:
       REGION1: ${{ needs.setup-job.outputs.REGION1 }}
       REGION2: ${{ needs.setup-job.outputs.REGION2 }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: Read exported variable
         run: |
           echo "PROJECT_ID ENV: ${{ env.PROJECT_ID }}"
