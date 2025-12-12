@@ -399,7 +399,7 @@ exports[`Home renders homepage unchanged 1`] = `
         </p>
         <p>
           With 
-          6
+          8
           + years of immersion in the tech realm under my belt, I've become somewhat of a tech explorer. From tinkering with new applications to diving headfirst into the latest tech trends, I'm always on the lookout for the next big thing.
         </p>
         <p>
@@ -446,7 +446,7 @@ exports[`Home renders homepage unchanged 1`] = `
               <span
                 class="text-black text-4xl font-bold  leading-10"
               >
-                6
+                8
               </span>
               <span
                 class="text-black text-4xl font-bold font-['Poppins'] leading-10"
